@@ -27,37 +27,37 @@ export const speakers: Speaker[] = [
     name: 'Angelina Hing',
     title: 'Founder, Integro Law',
     topic: 'Divorce and its financial implications',
-    avatar: './public/s1.png',
+    avatar: '/s1.png',
   },
   {
     name: 'Ooi Li Sun',
     title: 'Director, Wills & Estates, Riverside Planning Services',
     topic: 'Managing a property already held in trust',
-    avatar: './public/s2.png',
+    avatar: '/s2.png',
   },
   {
     name: 'Ronald Wong',
     title: 'CFP®, TEP - Managing Director, Financial Perspectives',
     topic: 'Estate planning as the foundation of financial planning and wealth management',
-    avatar: './public/s3.png',
+    avatar: '/s3.png',
   },
   {
     name: 'Keon Chee',
     title: 'Founder & Executive Director, Riverside Trustees',
     topic: 'Will and trust missteps',
-    avatar: './public/s4.png',
+    avatar: '/s4.png',
   },
   {
     name: 'Low Seow Ling',
     title: 'Founder & Managing Director, Emre Legal LLC',
     topic: 'Cross-border will writing and probate',
-    avatar: './public/s5.png',
+    avatar: '/s5.png',
   },
   {
     name: 'Abdul Rahman BMH',
     title: 'Managing Director, Abdul Rahman Law Corporation',
     topic: 'Estate planning for Muslims',
-    avatar: './public/s6.png',
+    avatar: '/s6.png',
   },
 ];
 
