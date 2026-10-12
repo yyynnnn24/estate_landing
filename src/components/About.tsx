@@ -21,10 +21,7 @@ export default function About() {
 
           {/* Intro text */}
           <p className="text-navy-700 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-10">
-            Join us at the {eventInfo.title} for a comprehensive full-day forum bringing together
-            leading legal and financial professionals to share practical perspectives on family,
-            property and legacy planning. This event is designed for practitioners, advisors and
-            individuals seeking actionable knowledge in estate planning.
+            Join us for a full day of practical talks on divorce, trusts, wills, cross-border probate and estate planning for Muslims — with three MOU signings, a launch, and our joint graduation ceremony
           </p>
 
           {/* Bullet points */}

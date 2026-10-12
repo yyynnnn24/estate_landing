@@ -15,12 +15,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-12">
-        {/* Presented by badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/15 border border-gold-500/30 rounded-full backdrop-blur-sm mb-6 animate-fade-in">
-          <span className="text-gold-300 text-xs font-semibold tracking-widest uppercase">
-            Presented by {eventInfo.presentedBy}
-          </span>
-        </div>
+       
 
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 animate-fade-up">
@@ -57,7 +52,7 @@ export default function Hero() {
           className="inline-flex items-center justify-center px-8 sm:px-10 py-4 bg-gold-500 hover:bg-gold-400 text-navy-700 font-bold text-base sm:text-lg rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-500/40 hover:-translate-y-1 animate-fade-up"
           style={{ animationDelay: '0.45s' }}
         >
-          Register Now
+          Register Now - $150 nett
         </a>
 
         {/* Small note */}
