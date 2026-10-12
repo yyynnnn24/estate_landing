@@ -35,7 +35,7 @@ export default function Speakers() {
                   <img
                     src={speaker.avatar}
                     alt={speaker.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   {/* Subtle gold bottom border */}
