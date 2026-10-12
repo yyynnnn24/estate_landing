@@ -18,9 +18,7 @@ export default function RegisterCTA() {
             <div className="inline-flex items-center gap-2 text-gold-400 font-semibold text-xs tracking-widest uppercase mb-3">
               <span>Register Now</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Secure your seat today
-            </h2>
+
             <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-6" />
             <p className="text-navy-100/80 text-lg">
               Ticket price: <span className="text-gold-400 font-bold text-xl">{eventInfo.ticketPrice}</span>
@@ -73,27 +71,11 @@ export default function RegisterCTA() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 text-navy-100/90">
-                <div className="w-10 h-10 rounded-lg bg-gold-500/15 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={18} className="text-gold-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-navy-200/60 uppercase tracking-wider font-semibold">Venue</p>
-                  <p className="text-sm text-white font-medium">{eventInfo.venue}</p>
-                </div>
-              </div>
+             
             </div>
           </div>
 
-          {/* Closing sentence */}
-          <div className="mt-12 text-center">
-            <div className="inline-block">
-              <div className="w-12 h-0.5 bg-gold-500/50 mx-auto mb-4" />
-              <p className="text-navy-100/90 text-base sm:text-lg leading-relaxed max-w-2xl">
-                We look forward to seeing you at {eventInfo.venue} on {eventInfo.date}.
-              </p>
-            </div>
-          </div>
+          
         </SectionReveal>
       </div>
     </section>

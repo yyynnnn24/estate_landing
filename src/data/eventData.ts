@@ -27,79 +27,84 @@ export const speakers: Speaker[] = [
     name: 'Angelina Hing',
     title: 'Founder, Integro Law',
     topic: 'Divorce and its financial implications',
-    avatar: 'https://images.pexels.com/photos/25651531/pexels-photo-25651531.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s1.png',
   },
   {
     name: 'Ooi Li Sun',
     title: 'Director, Wills & Estates, Riverside Planning Services',
     topic: 'Managing a property already held in trust',
-    avatar: 'https://images.pexels.com/photos/34761515/pexels-photo-34761515.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s2.png',
   },
   {
-    name: 'Ronald Wong CFP®, TEP',
-    title: 'Managing Director, Financial Perspectives',
+    name: 'Ronald Wong',
+    title: 'CFP®, TEP - Managing Director, Financial Perspectives',
     topic: 'Estate planning as the foundation of financial planning and wealth management',
-    avatar: 'https://images.pexels.com/photos/26150470/pexels-photo-26150470.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s3.png',
   },
   {
     name: 'Keon Chee',
-    title: 'Director, Riverside Trustees; Founder & Executive',
+    title: 'Founder & Executive Director, Riverside Trustees',
     topic: 'Will and trust missteps',
-    avatar: 'https://images.pexels.com/photos/28442318/pexels-photo-28442318.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s4.png',
   },
   {
     name: 'Low Seow Ling',
     title: 'Founder & Managing Director, Emre Legal LLC',
     topic: 'Cross-border will writing and probate',
-    avatar: 'https://images.pexels.com/photos/33369429/pexels-photo-33369429.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s5.png',
   },
   {
     name: 'Abdul Rahman BMH',
     title: 'Managing Director, Abdul Rahman Law Corporation',
     topic: 'Estate planning for Muslims',
-    avatar: 'https://images.pexels.com/photos/8495301/pexels-photo-8495301.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    avatar: './public/s6.png',
   },
 ];
 
-export type AgendaItem = {
+export interface AgendaItem {
   time: string;
   session: string;
   speaker: string;
-};
+  isBold?: boolean; // for MOU / Graduation bold text
+}
 
-// Full-day programme — TODO: Verify agenda details against the latest event document
 export const agenda: AgendaItem[] = [
-  { time: '9:00 AM – 9:30 AM', session: 'Registration & Welcome Tea', speaker: '—' },
-  { time: '9:30 AM – 10:00 AM', session: 'Opening Address', speaker: 'ARLC Representative' },
-  { time: '10:00 AM – 10:45 AM', session: 'Divorce and its financial implications', speaker: 'Angelina Hing' },
-  { time: '10:45 AM – 11:15 AM', session: 'Tea Break', speaker: '—' },
-  { time: '11:15 AM – 12:00 PM', session: 'Managing a property already held in trust', speaker: 'Ooi Li Sun' },
-  { time: '12:00 PM – 12:45 PM', session: 'Estate planning as the foundation of financial planning and wealth management', speaker: 'Ronald Wong CFP®, TEP' },
-  { time: '12:45 PM – 1:45 PM', session: 'Networking Lunch', speaker: '—' },
-  { time: '1:45 PM – 2:30 PM', session: 'Will and trust missteps', speaker: 'Keon Chee' },
-  { time: '2:30 PM – 3:15 PM', session: 'Cross-border will writing and probate', speaker: 'Low Seow Ling' },
-  { time: '3:15 PM – 3:45 PM', session: 'Tea Break', speaker: '—' },
-  { time: '3:45 PM – 4:30 PM', session: 'Estate planning for Muslims', speaker: 'Abdul Rahman BMH' },
-  { time: '4:30 PM – 5:00 PM', session: 'MOU Signings, Product Launch & Joint Graduation Ceremony', speaker: 'ARLC & Partners' },
+  { time: '9:00 AM – 9:30 AM', session: 'Registration & networking', speaker: '—' },
+  { time: '9:30 AM – 9:45 AM', session: 'Welcome & Opening Address', speaker: 'Ronald Wong' },
+  { time: '9:45 AM – 10:35 AM', session: 'Divorce and its financial implications', speaker: 'Angelina Hing' },
+  { time: '10:35 AM – 10:55 AM', session: 'Tea Break', speaker: '—' },
+  { time: '10:55 AM – 11:45 AM', session: 'Managing a property already held in trust', speaker: 'Ooi Li Sun' },
+  { time: '11:45 AM – 12:00 PM', session: 'Estate planning as the foundation of financial planning and wealth management', speaker: 'Ronald Wong' },
+  { time: '12:00 PM – 12:20 PM', session: 'Graduation ceremony: Riverside Training and Financial Perspectives', speaker: '—', isBold: true },
+  { time: '12:20 PM – 12:35 PM', session: 'MOU signing: SmartWills RT Academy and Financial Perspectives', speaker: '—', isBold: true },
+  { time: '12:35 PM – 1:35 PM', session: 'Lunch', speaker: '—' },
+  { time: '1:35 PM – 2:25 PM', session: 'Will and trust missteps', speaker: 'Keon Chee' },
+  { time: '2:25 PM – 2:40 PM', session: 'MOU signing: Riverside Trustees and SmartWills', speaker: '—', isBold: true },
+  { time: '2:40 PM – 3:30 PM', session: 'Cross‑border will writing and probate', speaker: 'Low Seow Ling' },
+  { time: '3:30 PM – 3:45 PM', session: 'Tea Break', speaker: '—' },
+  { time: '3:45 PM – 4:35 PM', session: 'Estate planning for Muslims', speaker: 'Abdul Rahman BMH' },
+  { time: '4:35 PM – 4:50 PM', session: 'MOU signing: ARLC and SmartWills — launch of Wasiatku Singapore', speaker: '—', isBold: true },
+  { time: '4:50 PM – 5:00 PM', session: 'Closing and farewell', speaker: 'Keon Chee and Ronald Wong' },
 ];
+
 
 export const highlights = [
   {
     badge: 'LAUNCH',
     title: 'SmartWills Wasiatku Singapore',
-    description: 'MOU signing between ARLC and SmartWills — marking the official launch of SmartWills Wasiatku in Singapore.',
+    description: 'Marked by an MOU signing between ARLC and SmartWills',
     icon: 'Rocket',
   },
   {
     badge: 'ACADEMY',
     title: 'SmartWills RT Academy',
-    description: 'A structured pathway for estate planning education, designed to equip practitioners with comprehensive knowledge and certification.',
+    description: 'Creating a structured pathway for estate planning education',
     icon: 'GraduationCap',
   },
   {
     badge: 'CEREMONY',
     title: 'Graduation',
-    description: 'Celebrate the achievements of Riverside Training and Financial Perspectives graduates at the joint graduation ceremony.',
+    description: 'Celebrating the graduates of Riverside Training and Financial Perspectives',
     icon: 'Award',
   },
 ];

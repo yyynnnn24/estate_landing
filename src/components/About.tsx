@@ -8,7 +8,7 @@ export default function About() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           {/* Section header */}
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase mb-3">
               <Info size={14} />
               <span>About This Forum</span>
@@ -17,7 +17,7 @@ export default function About() {
               A full day of practical estate planning insights
             </h2>
             <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full" />
-          </div>
+          </div> */}
 
           {/* Intro text */}
           <p className="text-navy-700 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-10">
@@ -25,7 +25,7 @@ export default function About() {
           </p>
 
           {/* Bullet points */}
-          <div className="bg-white rounded-2xl shadow-sm border border-navy-100/50 p-6 sm:p-10">
+          {/* <div className="bg-white rounded-2xl shadow-sm border border-navy-100/50 p-6 sm:p-10">
             <ul className="grid gap-4 sm:grid-cols-2">
               {aboutBullets.map((bullet, idx) => (
                 <li key={idx} className="flex items-start gap-3 group">
@@ -36,7 +36,7 @@ export default function About() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Presented by logo — TODO: Replace the ARLC mark with the official sponsor logo */}
           <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-2xl border border-navy-100/50 bg-white px-6 py-7 text-center shadow-sm">
@@ -46,13 +46,10 @@ export default function About() {
             <div className="flex items-center gap-3">
               {/* Logo image — Replace with the official ARLC logo when available */}
               <img
-                src="/arlc-logo.svg"
-                alt="ARLC logo"
-                className="h-12 w-32 rounded-xl object-cover"
+                src="/logo.png"
+                alt="logo"
+                className="h-full w-full rounded-xl object-cover"
               />
-              <span className="text-2xl font-bold tracking-[0.12em] text-navy-500">
-                {eventInfo.presentedBy}
-              </span>
             </div>
           </div>
         </SectionReveal>
