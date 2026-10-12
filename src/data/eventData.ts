@@ -4,7 +4,7 @@ export const eventInfo = {
   subtitle: 'Practical perspectives on family, property and legacy',
   date: '27 November 2026',
   time: '9am – 5pm',
-  venue: 'Voco Orchard Singapore',
+  venue: 'voco Orchard Singapore',
   ticketPrice: '$150 nett per participant',
   registrationCloseDate: '[date]', // TODO: Replace with actual registration closing date
   contact: '[contact]', // TODO: Replace with actual contact email/phone

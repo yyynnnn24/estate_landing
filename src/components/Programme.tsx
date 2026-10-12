@@ -1,90 +1,58 @@
-
-import { CalendarDays } from 'lucide-react';
 import SectionReveal from './SectionReveal';
 import { agenda } from '@/data/eventData';
 
 export default function Programme() {
   return (
-    <section id="programme" className="py-20 lg:py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="programme" className="bg-[#f4efe6] py-20">
+      <div className="mx-auto max-w-[1260px] px-4 sm:px-5 lg:px-6">
         <SectionReveal>
-          {/* Section header */}
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase mb-3">
-              <CalendarDays size={14} />
-              <span>Full-Day Programme</span>
+          <div className="mb-8 text-center">
+            <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a67a3c]">
+              Event Programme
             </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-4">
-              Agenda for 27 November 2026
+            <h2 className="font-display text-[3.1rem] leading-[0.9] tracking-[-0.06em] text-[#0f2b5b]">
+              Forum Agenda
             </h2>
-
-            <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full" />
           </div>
         </SectionReveal>
 
         <SectionReveal>
-          {/* Table — horizontally scrollable on mobile */}
-          <div className="overflow-x-auto rounded-2xl shadow-sm border border-navy-100">
-            <table className="w-full min-w-[640px] text-left">
-              <thead>
-                <tr className="bg-navy-500">
-                  <th className="px-6 py-4 text-gold-400 font-semibold text-sm tracking-wider uppercase whitespace-nowrap">
-                    Time
-                  </th>
-                  <th className="px-6 py-4 text-gold-400 font-semibold text-sm tracking-wider uppercase">
-                    Session
-                  </th>
-                  <th className="px-6 py-4 text-gold-400 font-semibold text-sm tracking-wider uppercase whitespace-nowrap">
-                    Speaker
-                  </th>
-                </tr>
-              </thead>
+            <div className="overflow-hidden rounded-[18px] border border-[#d3cbbd] bg-[#f8f4ee] shadow-[0_10px_20px_rgba(14,34,71,0.04)]">
+              <table className="w-full border-collapse text-left">
+                <thead>
+                  <tr className="bg-[#0f2b5b] text-[#d9a642]">
+                    <th scope="col" className="px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.12em] sm:w-[200px]">
+                      Time
+                    </th>
+                    <th scope="col" className="px-4 py-4 text-[12px] font-semibold uppercase tracking-[0.12em]">
+                      Session
+                    </th>
+                    <th scope="col" className="px-4 py-4 text-[12px] font-semibold uppercase tracking-[0.12em] sm:w-[170px]">
+                      Speaker
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {agenda.map((item, idx) => {
+                    const topBorder = idx !== 0 ? 'border-t border-[#e4dcc9]' : '';
 
-              <tbody>
-                {agenda.map((item, idx) => {
-                  const isBreak = item.speaker === '—';
-
-                  return (
-                    <tr
-                      key={idx}
-                      className={`border-t border-navy-50 transition-colors duration-200 hover:bg-gold-50/50 ${
-                        isBreak ? 'bg-navy-50/30' : 'bg-white'
-                      } ${
-                        idx % 2 === 0 && !isBreak
-                          ? 'bg-bg-base/40'
-                          : ''
-                      }`}
-                    >
-                      <td className="px-6 py-4 text-navy-500 font-semibold text-sm whitespace-nowrap">
-                        {item.time}
-                      </td>
-
-                      
-                      <td className="px-6 py-4 text-navy-700 text-sm">
-                        <span
-                          className={
-                            item.isBold
-                              ? 'font-bold'
-                              : isBreak
-                                ? 'text-navy-400 italic'
-                                : ''
-                          }
-                        >
-                          {item.session}
-                        </span>
-                      </td>
-
-
-                      <td className="px-6 py-4 text-gold-700 text-sm font-medium">
-                        {item.speaker}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+                    return (
+                      <tr key={idx} className={`${topBorder} ${idx % 2 === 0 ? 'bg-[#f1ece3]' : 'bg-[#f9f5ef]'}`}>
+                        <td className="px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-[#0f2b5b] sm:w-[200px]">
+                          {item.time}
+                        </td>
+                        <td className="px-4 py-4 text-[15px] text-[#1c375d]">
+                          <span className={item.isBold ? 'font-bold' : ''}>{item.session}</span>
+                        </td>
+                        <td className="w-[170px] px-4 py-4 text-[13px] font-medium text-[#9d793f]">
+                          {item.speaker}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
         </SectionReveal>
       </div>
     </section>

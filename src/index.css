@@ -1,40 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color: #0f2b5b;
+  background: #f4efe6;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #F7F9FC;
+  background: #f4efe6;
+  color: #0f2b5b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #E8EDF5;
+  background: #e8e0d1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0F2B5B;
-  border-radius: 4px;
+  background: #0f2b5b;
+  border-radius: 999px;
 }
 
-/* Gold gradient text */
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
 .text-gold-gradient {
-  background: linear-gradient(135deg, #C8A462 0%, #E0C071 50%, #C8A462 100%);
+  background: linear-gradient(135deg, #c8a462 0%, #f0d78b 35%, #b89250 70%, #e8c67f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Section reveal animation */
 .section-reveal {
   opacity: 0;
   transform: translateY(30px);

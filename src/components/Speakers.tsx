@@ -1,58 +1,46 @@
-
-import { Users } from 'lucide-react';
 import SectionReveal from './SectionReveal';
 import { speakers } from '@/data/eventData';
 
 export default function Speakers() {
   return (
-    <section id="speakers" className="py-12 lg:py-16 bg-bg-base">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="speakers" className="bg-[#0d3e3f] py-16 text-white">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-5 lg:px-6">
         <SectionReveal>
-          {/* Section header */}
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase mb-3">
-              <Users size={14} />
-              <span>Our Expert Speakers</span>
+          <div className="mb-8 lg:mb-10">
+            <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d8c09a]">
+              Featured Speakers
             </div>
-
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-500 mb-3">
-              Learn from industry leaders
+            <h2 className="font-display text-[3rem] leading-[0.9] tracking-[-0.06em] text-[#f6f0e7] sm:text-[4rem] lg:text-[5rem]">
+              Learn from
+              <span className="block">Leading Experts</span>
             </h2>
-
-            <p className="text-navy-600 text-sm max-w-2xl mx-auto">
-              Six distinguished practitioners sharing their expertise across the full spectrum of estate planning.
-            </p>
-
-            <div className="w-16 h-1 bg-gold-500 mx-auto rounded-full mt-4" />
           </div>
         </SectionReveal>
 
-        {/* Speaker cards — one per row */}
-        <div className="flex flex-col gap-4">
+        <div className="space-y-4">
           {speakers.map((speaker, idx) => (
             <SectionReveal key={idx}>
-              <div className="group bg-white rounded-xl shadow-sm border border-navy-100/50 overflow-hidden hover:shadow-lg transition-all duration-300 flex items-center gap-4 p-4">
-                {/* Avatar */}
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 overflow-hidden rounded-full bg-navy-100">
+              <div className="flex items-center gap-4 rounded-[18px] border border-[#d2c39c]/30 bg-[#f5f1ea] p-4 text-[#0f2b5b] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-0.5 sm:gap-6 sm:p-5 lg:gap-7 lg:p-6">
+                <div className="relative h-[82px] w-[82px] shrink-0 overflow-hidden rounded-full border-[3px] border-[#d9ba76] bg-[#e1e4e8] sm:h-[96px] sm:w-[96px] lg:h-[108px] lg:w-[108px]">
                   <img
                     src={speaker.avatar}
                     alt={speaker.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
                 </div>
 
-                {/* Speaker info */}
-                <div className="flex flex-col min-w-0">
-                  <h3 className="text-base font-bold text-navy-500 mb-1">
-                    {speaker.name}
-                  </h3>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:gap-3">
+                    <h3 className="font-display text-[2rem] leading-[1] tracking-[-0.04em] text-[#0f2b5b] sm:text-[2.4rem]">
+                      {speaker.name}
+                    </h3>
+                    <p className="text-[1rem] leading-[1.4] text-[#123a64] sm:text-[1.1rem]">
+                      {speaker.title}
+                    </p>
+                  </div>
 
-                  <p className="text-gold-600 text-xs sm:text-sm font-medium mb-2 leading-snug">
-                    {speaker.title}
-                  </p>
-
-                  <p className="text-navy-700 text-sm leading-relaxed">
+                  <p className="mt-2 text-[1.1rem] leading-[1.5] text-[#123a64] sm:text-[1.2rem]">
                     {speaker.topic}
                   </p>
                 </div>

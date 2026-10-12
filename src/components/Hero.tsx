@@ -1,17 +1,81 @@
-
-import { heroImage } from '@/data/eventData';
+import { Calendar, Clock, MapPin } from 'lucide-react';
+import { eventInfo, heroImage } from '@/data/eventData';
 
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="relative min-h-screen w-full overflow-hidden"
-    >
-      {/* Full-opacity background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${heroImage}')` }}
-      />
+    <section id="top" className="relative bg-[#f3efe8] pb-4">
+      <div className="mx-auto max-w-[1280px] px-4 pt-5 sm:px-5 lg:px-6">
+        <div className="relative overflow-hidden rounded-[30px] border border-[#d7c9a5] bg-[#d7d0c3] shadow-[0_12px_30px_rgba(16,34,64,0.12)]">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-[1.02]"
+            style={{ backgroundImage: `url('${heroImage}')` }}
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(231,225,215,0.9)_0%,rgba(231,225,215,0.84)_38%,rgba(231,225,215,0.62)_58%,rgba(17,34,71,0.12)_100%)]" />
+
+          <div className="relative z-10 min-h-[440px] px-5 py-6 sm:min-h-[500px] sm:px-7 lg:min-h-[540px] lg:px-10">
+            <div className="mb-3 flex flex-wrap items-center gap-3 text-[10px] font-medium uppercase tracking-[0.18em] text-[#0f2b5b] sm:text-[11px] lg:text-[12px]">
+              <span>{eventInfo.date}</span>
+              <span className="text-[#0f2b5b]/70">•</span>
+              <span>{eventInfo.venue}</span>
+            </div>
+
+            <h1 className="font-display text-[3rem] leading-[0.84] tracking-[-0.06em] text-[#0f2b5b] sm:text-[4.5rem] lg:text-[6.2rem]">
+              Singapore Estate
+              <span className="block text-[#0f2b5b]">Planning Forum 2026</span>
+            </h1>
+
+            <div className="mt-4 max-w-[760px] text-[1rem] font-medium leading-[1.3] text-[#1c3d5d] sm:text-[1.3rem] lg:text-[1.6rem]">
+              Featuring the Launch of <span className="text-[#2f6863]">SmartWills Wasiatku Singapore</span>
+            </div>
+
+            <div className="mt-3 max-w-[760px] text-[0.95rem] leading-[1.35] text-[#123a64] sm:text-[1.15rem] lg:text-[1.35rem]">
+              <span className="inline-block">SmartWills RT Academy</span>
+              <span className="mx-3 text-[#123a64]/60">•</span>
+              <span className="inline-block">Graduation Ceremony for Riverside Training and Financial Perspectives</span>
+            </div>
+
+            <div className="mt-2 max-w-[760px] text-[0.95rem] leading-[1.35] text-[#123a64] sm:text-[1.15rem] lg:text-[1.35rem]">
+              Practical perspectives on family, property and legacy.
+            </div>
+
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <a
+                href="#register"
+                className="inline-flex items-center justify-center rounded-full bg-[#0f2b5b] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-white shadow-[0_8px_20px_rgba(15,43,91,0.25)] transition-opacity hover:opacity-90 sm:px-6 sm:text-[12px]"
+              >
+                Register for the Forum <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="#programme"
+                className="inline-flex items-center justify-center rounded-full border border-[#0f2b5b]/40 bg-[#f7f3ee]/80 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0f2b5b] transition-opacity hover:opacity-80 sm:px-6 sm:text-[12px]"
+              >
+                Explore Programme
+              </a>
+            </div>
+
+            <div className="mt-7 flex flex-wrap items-center gap-5 text-[#123a64] sm:gap-8 sm:text-[1rem] lg:text-[1.15rem]">
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#123a64]/30 bg-[#f5efe6]/80">
+                  <Calendar className="h-4 w-4" />
+                </span>
+                <span>{eventInfo.date}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#123a64]/30 bg-[#f5efe6]/80">
+                  <Clock className="h-4 w-4" />
+                </span>
+                <span>{eventInfo.time}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#123a64]/30 bg-[#f5efe6]/80">
+                  <MapPin className="h-4 w-4" />
+                </span>
+                <span>{eventInfo.venue}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

@@ -10,57 +10,34 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function Highlights() {
   return (
-    <section id="highlights" className="py-20 lg:py-28 bg-navy-500 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="highlights" className="bg-[#f4efe6] pt-12 pb-16 lg:pt-14 lg:pb-20">
+      <div className="mx-auto max-w-[1260px] px-4 sm:px-5 lg:px-6">
         <SectionReveal>
-          {/* Section header */}
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 text-gold-400 font-semibold text-xs tracking-widest uppercase mb-3">
-              <span>Forum Highlights</span>
+          <div className="mb-8">
+            <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a67a3c]">
+              Key Highlights
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Key moments of the forum
+            <h2 className="font-display text-[3.2rem] leading-[0.9] tracking-[-0.06em] text-[#0f2b5b]">
+              What to Expect
             </h2>
-            <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full" />
           </div>
         </SectionReveal>
 
-        {/* 3-column card grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid gap-5 md:grid-cols-3">
           {highlights.map((highlight, idx) => {
             const Icon = iconMap[highlight.icon] ?? Award;
             return (
               <SectionReveal key={idx}>
-                <div
-                  className="group relative bg-navy-600/40 border border-navy-400/20 rounded-2xl p-8 hover:bg-navy-600/60 hover:border-gold-500/30 transition-all duration-500 hover:-translate-y-2 h-full backdrop-blur-sm"
-                  style={{ transitionDelay: `${idx * 0.1}s` }}
-                >
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-gold-500/15 flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-all duration-500">
-                    <Icon size={28} className="text-gold-400 group-hover:text-navy-600 transition-colors duration-500" />
+                <div className="h-full rounded-[14px] border border-[#d7d0c6] bg-[#f7f3eb] p-5 shadow-[0_8px_20px_rgba(16,29,55,0.03)]">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-[#dabd8b] bg-[#f4ead6] text-[#0f2b5b]">
+                    <Icon className="h-5 w-5" />
                   </div>
-
-                  {/* Badge */}
-                  <span className="inline-block px-3 py-1 bg-gold-500/20 text-gold-300 text-xs font-bold tracking-widest uppercase rounded-md mb-4">
-                    {highlight.badge}
-                  </span>
-
-                  {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 leading-snug">
+                  <h3 className="text-[17px] font-semibold leading-[1.4] text-[#0f2b5b]">
                     {highlight.title}
                   </h3>
-
-                  {/* Description */}
-                  <p className="text-navy-100/70 text-sm lg:text-base leading-relaxed">
+                  <p className="mt-3 text-[15px] leading-[1.6] text-[#495f7d]">
                     {highlight.description}
                   </p>
-
-                  {/* Bottom accent line */}
-                  <div className="mt-6 w-12 h-0.5 bg-gold-500/40 group-hover:w-full transition-all duration-500" />
                 </div>
               </SectionReveal>
             );

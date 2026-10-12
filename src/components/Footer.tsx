@@ -2,35 +2,29 @@
 import { MapPin, Calendar } from 'lucide-react';
 import { eventInfo } from '@/data/eventData';
 
+const footerLinks = ['Home', 'About', 'Programme', 'Speakers', 'Venue'];
+
 export default function Footer() {
   return (
-    <footer className="bg-navy-700 border-t border-navy-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col items-center justify-center gap-6 text-center">
-
-          {/* Closing sentence */}
-          <div>
-            <div className="w-12 h-0.5 bg-gold-500/50 mx-auto mb-4" />
-            <p className="text-navy-100/90 text-base sm:text-lg leading-relaxed max-w-2xl">
-              We look forward to seeing you at {eventInfo.venue} on {eventInfo.date}.
-            </p>
+    <footer className="bg-[#0d2f3d] text-[#eaf1ee]">
+      <div className="mx-auto max-w-[1260px] px-4 py-5 sm:px-5 lg:px-6">
+        <div className="flex flex-col gap-4 border-t border-[#1e4857] pt-5 md:flex-row md:items-center md:justify-between">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#eaf1ee]">
+            Singapore Estate Planning Forum 2026
           </div>
 
-          {/* Venue and date */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-navy-200/60 text-xs">
-            <div className="flex items-center gap-2">
-              <Calendar size={14} className="text-gold-500/70" />
-              <span>{eventInfo.date}, {eventInfo.time}</span>
-            </div>
+          <nav className="flex flex-wrap items-center gap-5 text-[12px] text-[#d5e3e3]">
+            {footerLinks.map((item) => (
+              <a key={item} href={`#${item.toLowerCase()}`} className="transition-opacity hover:opacity-80">
+                {item}
+              </a>
+            ))}
+          </nav>
 
-            <div className="hidden sm:block w-px h-4 bg-navy-500/50" />
-
-            <div className="flex items-center gap-2">
-              <MapPin size={14} className="text-gold-500/70" />
-              <span>{eventInfo.venue}</span>
-            </div>
+          <div className="flex items-center gap-3 text-[12px] text-[#d5e3e3]">
+            <MapPin className="h-4 w-4 text-[#d8bb7a]" />
+            <span>{eventInfo.venue}</span>
           </div>
-
         </div>
       </div>
     </footer>
