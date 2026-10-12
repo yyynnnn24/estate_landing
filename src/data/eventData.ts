@@ -2,7 +2,6 @@
 export const eventInfo = {
   title: 'Singapore Estate Planning Forum 2026',
   subtitle: 'Practical perspectives on family, property and legacy',
-  presentedBy: 'ARLC',
   date: '27 November 2026',
   time: '9am – 5pm',
   venue: 'Voco Orchard Singapore',
@@ -12,7 +11,7 @@ export const eventInfo = {
 };
 
 // Hero background image — TODO: Replace with actual conference ballroom photo
-export const heroImage = 'https://images.pexels.com/photos/19569865/pexels-photo-19569865.jpeg?auto=compress&cs=tinysrgb&w=1920';
+export const heroImage = '/hero.jpeg';
 
 export type Speaker = {
   name: string;
