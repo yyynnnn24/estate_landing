@@ -1,4 +1,4 @@
-import { Check, Info, Scale } from 'lucide-react';
+import { Check, Info } from 'lucide-react';
 import SectionReveal from './SectionReveal';
 import { eventInfo, aboutBullets } from '@/data/eventData';
 
@@ -44,9 +44,12 @@ export default function About() {
               Presented by
             </p>
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-500 text-gold-400">
-                <Scale size={25} strokeWidth={1.8} />
-              </div>
+              {/* Logo image — Replace with the official ARLC logo when available */}
+              <img
+                src="/arlc-logo.svg"
+                alt="ARLC logo"
+                className="h-12 w-32 rounded-xl object-cover"
+              />
               <span className="text-2xl font-bold tracking-[0.12em] text-navy-500">
                 {eventInfo.presentedBy}
               </span>
