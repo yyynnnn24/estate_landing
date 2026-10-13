@@ -2,7 +2,7 @@ import SectionReveal from './SectionReveal';
 
 export default function IntroPartners() {
   return (
-    <section className="bg-[#f3f6fb] px-4 py-12 sm:px-6 lg:py-16">
+    <section className="bg-[#f4efe6] px-4 py-12 sm:px-6 lg:py-16">
       <div className="mx-auto max-w-[1120px]">
         <SectionReveal>
           <p className="mx-auto mb-10 max-w-[980px] text-center text-[17px] leading-[1.7] text-[#0f2b5b] sm:text-[19px]">

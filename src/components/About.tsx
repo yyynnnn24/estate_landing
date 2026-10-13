@@ -20,9 +20,6 @@ export default function About() {
                 practitioners and community members to share insights, explore the latest developments and foster
                 meaningful conversations on estate planning, wealth preservation and legacy.
               </p>
-              <a href="#programme" className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-[#0f2b5b]">
-                Learn More <span aria-hidden="true">→</span>
-              </a>
             </div>
 
             <div className="relative">

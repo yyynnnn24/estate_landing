@@ -3,50 +3,52 @@ import { speakers } from '@/data/eventData';
 
 export default function Speakers() {
   return (
-    <section id="speakers" className="bg-[#0d3e3f] py-16 text-white">
-      <div className="mx-auto max-w-[1280px] px-4 sm:px-5 lg:px-6">
-        <SectionReveal>
-          <div className="mb-8 lg:mb-10">
-            <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d8c09a]">
-              Featured Speakers
+    <section id="speakers" className="bg-[#f4efe6] px-4 py-8 text-white sm:px-6 sm:py-10 lg:py-12">
+      <div className="mx-auto max-w-[1120px]">
+        <div className="rounded-[24px] border border-[#b98e48]/40 bg-[#0b1b36] px-5 py-7 shadow-[0_18px_45px_rgba(7,20,42,0.18)] sm:rounded-[30px] sm:px-8 sm:py-9 lg:px-12 lg:py-11">
+          <SectionReveal>
+            <div className="mb-8 lg:mb-10">
+              <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d3a34f]">
+                Featured Speakers
+              </div>
+              <h2 className="font-display text-[2.8rem] leading-[0.92] tracking-[-0.05em] text-[#f6f0e7] sm:text-[3.5rem] lg:text-[4rem]">
+                Learn from
+                <span className="block">Leading Experts</span>
+              </h2>
             </div>
-            <h2 className="font-display text-[3rem] leading-[0.9] tracking-[-0.06em] text-[#f6f0e7] sm:text-[4rem] lg:text-[5rem]">
-              Learn from
-              <span className="block">Leading Experts</span>
-            </h2>
-          </div>
-        </SectionReveal>
+          </SectionReveal>
 
-        <div className="space-y-4">
-          {speakers.map((speaker, idx) => (
-            <SectionReveal key={idx}>
-              <div className="flex items-center gap-4 rounded-[18px] border border-[#d2c39c]/30 bg-[#f5f1ea] p-4 text-[#0f2b5b] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-0.5 sm:gap-6 sm:p-5 lg:gap-7 lg:p-6">
-                <div className="relative h-[82px] w-[82px] shrink-0 overflow-hidden rounded-full border-[3px] border-[#d9ba76] bg-[#e1e4e8] sm:h-[96px] sm:w-[96px] lg:h-[108px] lg:w-[108px]">
-                  <img
-                    src={speaker.avatar}
-                    alt={speaker.name}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:gap-3">
-                    <h3 className="font-display text-[2rem] leading-[1] tracking-[-0.04em] text-[#0f2b5b] sm:text-[2.4rem]">
-                      {speaker.name}
-                    </h3>
-                    <p className="text-[1rem] leading-[1.4] text-[#123a64] sm:text-[1.1rem]">
-                      {speaker.title}
-                    </p>
+          <div className="space-y-3 sm:space-y-4">
+            {speakers.map((speaker, idx) => (
+              <SectionReveal key={idx}>
+                <div className="flex min-w-0 items-center gap-4 rounded-[18px] border border-[#d3a34f]/25 bg-[#f7f3eb] p-4 text-[#0f2b5b] shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-shadow duration-300 hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)] sm:gap-5 sm:p-5">
+                  <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-[3px] border-[#d9ba76] bg-[#e1e4e8] sm:h-[84px] sm:w-[84px]">
+                    <img
+                      src={speaker.avatar}
+                      alt={speaker.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
 
-                  <p className="mt-2 text-[1.1rem] leading-[1.5] text-[#123a64] sm:text-[1.2rem]">
-                    {speaker.topic}
-                  </p>
+                  <div className="min-w-0 flex-1">
+                    <div>
+                      <h3 className="text-base font-semibold leading-snug text-[#0f2b5b] sm:text-lg">
+                        {speaker.name}
+                      </h3>
+                      <p className="mt-1 text-sm leading-snug text-[#a67a3c] sm:text-[15px]">
+                        {speaker.title}
+                      </p>
+                    </div>
+
+                    <p className="mt-2 text-sm leading-relaxed text-[#34516e] sm:text-[15px]">
+                      {speaker.topic}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </SectionReveal>
-          ))}
+              </SectionReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

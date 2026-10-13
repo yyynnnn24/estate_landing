@@ -11,7 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
 export default function Highlights() {
   return (
     <section id="highlights" className="bg-[#f4efe6] pt-12 pb-16 lg:pt-14 lg:pb-20">
-      <div className="mx-auto max-w-[1260px] px-4 sm:px-5 lg:px-6">
+      <div className="mx-auto max-w-[1120px] px-4 sm:px-5 lg:px-6">
         <SectionReveal>
           <div className="mb-8">
             <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a67a3c]">

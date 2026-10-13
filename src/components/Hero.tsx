@@ -3,8 +3,8 @@ import { eventInfo, heroImage } from '@/data/eventData';
 
 export default function Hero() {
   return (
-    <section id="top" className="relative bg-[#f3efe8] pb-4">
-      <div className="mx-auto max-w-[1280px] px-4 pt-5 sm:px-5 lg:px-6">
+    <section id="top" className="relative bg-[#f4efe6] pb-4">
+      <div className="mx-auto max-w-[1120px] px-4 pt-5 sm:px-5 lg:px-6">
         <div className="relative overflow-hidden rounded-[30px] border border-[#d7c9a5] bg-[#d7d0c3] shadow-[0_12px_30px_rgba(16,34,64,0.12)]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-[1.02]"

@@ -1,31 +1,27 @@
 
-import { MapPin, Calendar } from 'lucide-react';
 import { eventInfo } from '@/data/eventData';
-
-const footerLinks = ['Home', 'About', 'Programme', 'Speakers', 'Venue'];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d2f3d] text-[#eaf1ee]">
-      <div className="mx-auto max-w-[1260px] px-4 py-5 sm:px-5 lg:px-6">
-        <div className="flex flex-col gap-4 border-t border-[#1e4857] pt-5 md:flex-row md:items-center md:justify-between">
-          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#eaf1ee]">
-            Singapore Estate Planning Forum 2026
-          </div>
-
-          <nav className="flex flex-wrap items-center gap-5 text-[12px] text-[#d5e3e3]">
-            {footerLinks.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="transition-opacity hover:opacity-80">
-                {item}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3 text-[12px] text-[#d5e3e3]">
-            <MapPin className="h-4 w-4 text-[#d8bb7a]" />
-            <span>{eventInfo.venue}</span>
-          </div>
+    <footer className="relative isolate overflow-hidden bg-[#091a33] px-4 py-8 text-center text-[#f5f0e7] sm:py-10">
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-20 -right-16 -z-10 h-44 w-72 rotate-[-28deg] rounded-[50%] border border-[#d3ad5f]/40" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -right-12 -z-10 h-44 w-72 rotate-[-28deg] rounded-[50%] border border-[#d3ad5f]/20" />
+      <div className="mx-auto max-w-[1000px]">
+        <div className="mb-3 flex items-center justify-center gap-3" aria-hidden="true">
+          <span className="h-[2px] w-14 bg-[#d3ad5f]" />
+          <span className="h-4 w-4 rotate-45 bg-gradient-to-br from-[#f8e5a7] to-[#c38c38]" />
+          <span className="h-[2px] w-14 bg-[#d3ad5f]" />
         </div>
+        <h2 className="font-display text-[2rem] font-medium leading-[1.05] tracking-[-0.03em] text-[#f5f0e7] sm:text-[2.8rem] lg:text-[3.4rem]">
+          We look forward to seeing you
+        </h2>
+        <p className="mt-4 font-display text-[1.3rem] tracking-[0.18em] text-[#e0bd78] sm:text-[1.7rem] sm:tracking-[0.22em]">
+          {eventInfo.date}
+        </p>
+        <p className="mt-1 text-[0.75rem] uppercase tracking-[0.12em] text-[#d7d5d1] sm:text-sm sm:tracking-[0.16em]">
+          {eventInfo.time} · {eventInfo.venue}
+        </p>
+        <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-[#d3ad5f] to-transparent" aria-hidden="true" />
       </div>
     </footer>
   );
