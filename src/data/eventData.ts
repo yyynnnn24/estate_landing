@@ -7,7 +7,7 @@ export const eventInfo = {
   venue: 'voco Orchard Singapore',
   ticketPrice: '$150 nett per participant',
   registrationCloseDate: '[date]', // TODO: Replace with actual registration closing date
-  contact: 'Mr Teo +65 80579929', // TODO: Replace with actual contact email/phone
+  contact: 'Customer Service 89139929', // TODO: Replace with actual contact email/phone
 };
 
 // Hero background image — TODO: Replace with actual conference ballroom photo
