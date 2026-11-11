@@ -6,8 +6,8 @@ export const eventInfo = {
   time: '9am – 5pm',
   venue: 'voco Orchard Singapore',
   ticketPrice: '$150 nett per participant',
-  registrationCloseDate: '[date]', // TODO: Replace with actual registration closing date
-  contact: 'Customer Service 89139929', // TODO: Replace with actual contact email/phone
+  registrationCloseDate: '13 November 2026', // TODO: Replace with actual registration closing date
+  contact: 'enquiries@fp-edu.com', // TODO: Replace with actual contact email/phone
 };
 
 // Hero background image — TODO: Replace with actual conference ballroom photo
@@ -68,19 +68,19 @@ export interface AgendaItem {
 }
 
 export const agenda: AgendaItem[] = [
-  { time: '9:00 AM – 9:30 AM', session: 'Registration & networking', speaker: '—' },
-  { time: '9:30 AM – 9:45 AM', session: 'Welcome & Opening Address', speaker: 'Ronald Wong' },
-  { time: '9:45 AM – 10:35 AM', session: 'Divorce and its financial implications', speaker: 'Angelina Hing' },
-  { time: '10:35 AM – 10:55 AM', session: 'Tea Break', speaker: '—' },
-  { time: '10:55 AM – 11:45 AM', session: 'Managing a property already held in trust', speaker: 'Ooi Li Sun' },
-  { time: '11:45 AM – 12:00 PM', session: 'Estate planning as the foundation of financial planning and wealth management', speaker: 'Ronald Wong' },
-  { time: '12:00 PM – 12:20 PM', session: 'Graduation ceremony: Riverside Training and Financial Perspectives', speaker: '—', isBold: true },
-  { time: '12:20 PM – 12:35 PM', session: 'MOU signing: SmartWills RT Academy and Financial Perspectives', speaker: '—', isBold: true },
-  { time: '12:35 PM – 1:35 PM', session: 'Lunch', speaker: '—' },
-  { time: '1:35 PM – 2:25 PM', session: 'Will and trust missteps', speaker: 'Keon Chee' },
-  { time: '2:25 PM – 2:40 PM', session: 'MOU signing: Riverside Trustees and SmartWills', speaker: '—', isBold: true },
-  { time: '2:40 PM – 3:30 PM', session: 'Cross‑border will writing and probate', speaker: 'Low Seow Ling' },
-  { time: '3:30 PM – 3:45 PM', session: 'Tea Break', speaker: '—' },
+  { time: '8:30 AM – 9:00 AM', session: 'Registration & networking', speaker: '—' },
+  { time: '9:00 AM – 9:15 AM', session: 'Welcome and opening address, with a word from our Main Sponsor, Synergy Financial Advisers', speaker: 'Ronald Wong' },
+  { time: '9:15 AM – 10:05 AM', session: 'Divorce and its financial implications', speaker: 'Angelina Hing' },
+  { time: '10:05 AM – 10:25 AM', session: 'Tea Break', speaker: '—' },
+  { time: '10:25 AM – 11:15 AM', session: 'Managing a property already held in trust', speaker: 'Ooi Li Sun' },
+  { time: '11:15 AM – 11:30 AM', session: 'Estate planning as the foundation of financial planning and wealth management', speaker: 'Ronald Wong' },
+  { time: '11:30 AM – 12:00 PM', session: 'Graduation ceremony: Riverside Training and Financial Perspectives', speaker: '—', isBold: true },
+  { time: '12:00 PM – 12:15 PM', session: 'MOU signing: SmartWills RT Academy and Financial Perspectives', speaker: '—', isBold: true },
+  { time: '12:15 PM – 1:30 PM', session: 'Lunch', speaker: '—' },
+  { time: '1:30 PM – 2:20 PM', session: 'Will and trust missteps', speaker: 'Keon Chee' },
+  { time: '2:20 PM – 2:35 PM', session: 'MOU signing: Riverside Trustees and SmartWills', speaker: '—', isBold: true },
+  { time: '2:35 PM – 3:25 PM', session: 'Cross‑border will writing and probate', speaker: 'Low Seow Ling' },
+  { time: '3:25 PM – 3:45 PM', session: 'Tea Break', speaker: '—' },
   { time: '3:45 PM – 4:35 PM', session: 'Estate planning for Muslims', speaker: 'Abdul Rahman BMH' },
   { time: '4:35 PM – 4:50 PM', session: 'MOU signing: ARLC and SmartWills — launch of Wasiatku Singapore', speaker: '—', isBold: true },
   { time: '4:50 PM – 5:00 PM', session: 'Closing and farewell', speaker: 'Keon Chee and Ronald Wong' },

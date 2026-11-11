@@ -10,13 +10,29 @@ export default function IntroPartners() {
           </p>
 
           <div className="rounded-[20px] border border-[#dce4ee] bg-white px-5 py-7 shadow-[0_3px_8px_rgba(15,43,91,0.06)] sm:px-8 sm:py-8">
+            {/* Presented By */}
             <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[#0f2b5b]">
               Presented By
             </p>
+
             <img
               src="/logo.png"
               alt="SmartWills, SmartWills RT Academy, Financial Perspectives, Riverside Trustees and ARLC"
               className="mx-auto h-auto w-full max-w-[980px] object-contain"
+            />
+
+            {/* Divider */}
+            <div className="mx-auto my-8 h-px max-w-[900px] bg-[#dce4ee]" />
+
+            {/* Presented With */}
+            <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[#0f2b5b]">
+              Presented With
+            </p>
+
+            <img
+              src="/logo2.png"
+              alt="Presented With partners"
+              className="mx-auto h-auto w-full max-w-[250px] object-contain"
             />
           </div>
         </SectionReveal>

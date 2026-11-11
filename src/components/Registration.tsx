@@ -85,6 +85,10 @@ export default function Registration() {
                 Click the button below or scan the QR code to register.
               </p>
 
+              <p className="mt-3 text-[0.95rem] leading-relaxed text-[#e0ddd8] sm:mt-4 sm:text-xl">
+                Registration closes 13 November 2026.
+              </p>
+
               {/* Register button */}
               <a
                 href={registerLink}
@@ -111,9 +115,13 @@ export default function Registration() {
                     <p className="text-sm font-semibold text-[#d3a34f] sm:text-base">
                       Enquiries
                     </p>
-                    <p className="mt-1 break-words text-sm text-[#e0ddd8] sm:text-base">
+
+                    <a
+                      href={`mailto:${eventInfo.contact}`}
+                      className="mt-1 inline-block break-words text-sm text-[#e0ddd8] underline decoration-[#d3a34f]/50 underline-offset-4 transition-colors hover:text-[#d3a34f] sm:text-base"
+                    >
                       {eventInfo.contact}
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
