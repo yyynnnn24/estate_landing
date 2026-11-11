@@ -115,3 +115,34 @@ export const aboutBullets = [
   'Joint graduation ceremony',
   'Networking, tea breaks and lunch included',
 ];
+
+
+export type Sponsor = {
+  name: string;
+  logo: string;
+  className: string;
+};
+
+export const sponsorContactEmail = 'admin@smartwills.com.my';
+
+export const mainSponsor: Sponsor = {
+  name: 'Synergy Financial Advisers',
+  logo: '/logo2.png',
+  className: 'h-auto w-full max-w-[340px] sm:max-w-[400px]',
+};
+
+export const goldSponsors: Sponsor[] = [
+  {
+    name: 'Riverside Planning Services',
+    logo: '/logo3.png',
+    className: 'h-auto w-full max-w-[340px] sm:max-w-[600px]',
+  }
+];
+
+export const supportingSponsors: Sponsor[] = [
+  {
+    name: 'Advisors Alliance Group',
+    logo: '/logo4.png',
+    className: 'h-auto w-full max-w-[340px] sm:max-w-[600px]',
+  }
+];

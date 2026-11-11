@@ -6,7 +6,7 @@ import {
   sponsorContactEmail,
   supportingSponsors,
   type Sponsor,
-} from '@/data/sponsorData';
+} from '@/data/eventData';
 
 function SponsorCard({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -39,16 +39,16 @@ export default function Sponsors() {
     <section className="bg-[#f4efe6] px-4 py-12 sm:px-6 lg:py-16">
       <div className="mx-auto max-w-[1120px]">
         <SectionReveal>
-          <div className="mb-4 flex items-center gap-5">
-            <h2 className="font-display whitespace-nowrap text-[32px] font-semibold leading-[1.2] text-[#0f2b5b] sm:text-[40px]">
+          <div className="mb-4 flex items-center justify-center gap-5">
+            <h2 className="font-display text-[3.1rem] leading-[0.9] tracking-[-0.06em] text-[#0f2b5b]">
               Our Sponsors
             </h2>
-            <div className="h-px flex-1 bg-[#c8a462]" />
+            <div/>
           </div>
 
-          <p className="mb-10 max-w-[720px] text-[17px] leading-[1.7] text-[#0f2b5b]">
-            With thanks to the sponsors who share our commitment to raising the standard of estate planning across the industry.
-          </p>
+        <p className="mx-auto mb-3 max-w-[600px] text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a67a3c] leading-[1.8]">
+          With thanks to the sponsors who share our commitment to raising the standard of estate planning across the industry.
+        </p>
 
           <div className="space-y-6">
             <SponsorCard label="Main Sponsor">

@@ -14,10 +14,10 @@ function App() {
       <main>
         <Hero />
         <IntroPartners />
-        <Sponsors />
         <Highlights />
         <Speakers />
         <Programme />
+        <Sponsors />
         <Registration />
       </main>
       <Footer />
