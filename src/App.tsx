@@ -1,6 +1,7 @@
 // import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import IntroPartners from '@/components/IntroPartners';
+import Sponsors from '@/components/Sponsors';
 import Highlights from '@/components/Highlights';
 import Speakers from '@/components/Speakers';
 import Programme from '@/components/Programme';
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Hero />
         <IntroPartners />
+        <Sponsors />
         <Highlights />
         <Speakers />
         <Programme />
