@@ -12,7 +12,7 @@ export default function IntroPartners() {
           <div className="rounded-[20px] border border-[#dce4ee] bg-white px-5 py-7 shadow-[0_3px_8px_rgba(15,43,91,0.06)] sm:px-8 sm:py-8">
             {/* Presented By */}
             <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[#0f2b5b]">
-              Presented By
+              Organized By
             </p>
 
             <img

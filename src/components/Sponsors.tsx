@@ -8,26 +8,75 @@ import {
   type Sponsor,
 } from '@/data/eventData';
 
-function SponsorCard({ label, children }: { label: string; children: ReactNode }) {
+function SponsorSection({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
   return (
-    <div className="rounded-[20px] border border-[#c8a462]/60 bg-white px-6 py-8 shadow-[0_3px_10px_rgba(15,43,91,0.07)] sm:px-10 sm:py-10">
-      <p className="mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a7430]">
-        {label}
-      </p>
-      {children}
+    <div className="relative px-2 py-5 sm:px-4 sm:py-7">
+      {/* Ribbon heading */}
+      <div className="relative flex items-center justify-center gap-3 sm:gap-5">
+        <span className="h-px w-8 bg-[#c8a462] sm:w-20" />
+        <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
+
+        <div className="bg-gradient-to-b from-[#2f6db5] to-[#1d4f8f] px-8 py-3 text-center text-[12px] font-semibold uppercase tracking-[0.25em] text-white shadow-[0_5px_12px_rgba(15,43,91,0.2)] [clip-path:polygon(0_0,100%_0,calc(100%-16px)_50%,100%_100%,0_100%,16px_50%)] sm:px-10">
+          {label}
+        </div>
+
+        <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
+        <span className="h-px w-8 bg-[#c8a462] sm:w-20" />
+      </div>
+
+      <div className="relative mx-auto mt-8">
+        {children}
+      </div>
     </div>
   );
 }
 
-function SponsorLogos({ sponsors }: { sponsors: Sponsor[] }) {
+function SponsorLogoBox({
+  sponsor,
+  height = 'h-[200px]',
+}: {
+  sponsor: Sponsor;
+  height?: string;
+}) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
-      {sponsors.map((sponsor) => (
+    <div className="rounded-[10px] border-[4px] border-[#c8a462] bg-white p-2 shadow-[0_8px_20px_rgba(15,43,91,0.12)] transition-transform duration-300 hover:-translate-y-1">
+      <div className={`flex ${height} items-center justify-center border border-[#c8a462] p-6`}>
         <img
-          key={sponsor.name}
           src={sponsor.logo}
           alt={sponsor.name}
-          className={`w-auto object-contain ${sponsor.className}`}
+          className={`max-h-full max-w-full object-contain ${sponsor.className}`}
+        />
+      </div>
+    </div>
+  );
+}
+
+function SponsorGrid({
+  sponsors,
+  columns = 3,
+}: {
+  sponsors: Sponsor[];
+  columns?: 2 | 3;
+}) {
+  return (
+    <div
+      className={`mx-auto grid max-w-[1000px] grid-cols-1 gap-6 sm:grid-cols-2 ${
+        columns === 3
+          ? 'md:grid-cols-3'
+          : 'md:max-w-[760px] md:grid-cols-2'
+      } lg:gap-8`}
+    >
+      {sponsors.map((sponsor) => (
+        <SponsorLogoBox
+          key={sponsor.name}
+          sponsor={sponsor}
+          height={columns === 2 ? 'h-[220px]' : 'h-[200px]'}
         />
       ))}
     </div>
@@ -39,60 +88,39 @@ export default function Sponsors() {
     <section className="bg-[#f4efe6] px-4 py-12 sm:px-6 lg:py-16">
       <div className="mx-auto max-w-[1120px]">
         <SectionReveal>
-          <div className="mb-4 flex items-center justify-center gap-5">
+          <div className="mb-4 flex items-center justify-center">
             <h2 className="font-display text-[3.1rem] leading-[0.9] tracking-[-0.06em] text-[#0f2b5b]">
               Our Sponsors
             </h2>
-            <div/>
           </div>
 
-        <p className="mx-auto mb-3 max-w-[600px] text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a67a3c] leading-[1.8]">
-          With thanks to the sponsors who share our commitment to raising the standard of estate planning across the industry.
-        </p>
+          <p className="mx-auto mb-8 max-w-[600px] text-center text-[11px] font-semibold uppercase leading-[1.8] tracking-[0.18em] text-[#a67a3c]">
+            With thanks to the sponsors who share our commitment to raising the standard of estate planning across the industry.
+          </p>
 
-          <div className="space-y-6">
-            <SponsorCard label="Main Sponsor">
-              <img
-                src={mainSponsor.logo}
-                alt={mainSponsor.name}
-                className={`mx-auto object-contain ${mainSponsor.className}`}
-              />
-            </SponsorCard>
-
-            <div className="relative overflow-hidden rounded-[24px] bg-[#0f2b5b] px-5 pb-10 pt-14 shadow-[0_12px_30px_rgba(15,43,91,0.25)] sm:px-10 sm:pb-12 sm:pt-16">
-              <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(200,164,98,0.28),transparent_65%)]" />
-              <div aria-hidden className="pointer-events-none absolute inset-3 rounded-[18px] border border-[#c8a462]/40" />
-
-              <div className="relative flex items-center justify-center gap-3 sm:gap-5">
-                <span className="h-px w-6 bg-[#c8a462] sm:w-16" />
-                <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
-                <div className="bg-gradient-to-b from-[#2f6db5] to-[#1d4f8f] px-8 py-3 text-center text-[12px] font-semibold uppercase tracking-[0.3em] text-white shadow-[0_6px_14px_rgba(0,0,0,0.35)] [clip-path:polygon(0_0,100%_0,calc(100%-16px)_50%,100%_100%,0_100%,16px_50%)] sm:px-10">
-                  Gold Sponsor
-                </div>
-                <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
-                <span className="h-px w-6 bg-[#c8a462] sm:w-16" />
+          <div className="space-y-5">
+            {/* Main Sponsor */}
+            <SponsorSection label="Main Sponsor">
+              <div className="mx-auto max-w-[500px]">
+                <SponsorLogoBox
+                  sponsor={mainSponsor}
+                  height="h-[220px] sm:h-[250px]"
+                />
               </div>
+            </SponsorSection>
 
-              <div className="relative mx-auto mt-10 grid max-w-[360px] grid-cols-1 gap-6 md:max-w-none md:grid-cols-3 lg:gap-10">
-                {goldSponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="rounded-[10px] border-[5px] border-[#c8a462] bg-white p-2 shadow-[0_10px_24px_rgba(0,0,0,0.3)]"
-                  >
-                    <div className="flex h-[200px] items-center justify-center border border-[#c8a462] p-6 md:h-[180px] lg:h-[220px]">
-                      <img src={sponsor.logo} alt={sponsor.name} className={sponsor.className} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Gold Sponsors */}
+            <SponsorSection label="Gold Sponsors">
+              <SponsorGrid sponsors={goldSponsors} columns={3} />
+            </SponsorSection>
 
-            <SponsorCard label="Supporting Sponsors">
-              <SponsorLogos sponsors={supportingSponsors} />
-            </SponsorCard>
+            {/* Supporting Sponsors */}
+            <SponsorSection label="Supporting Sponsors">
+              <SponsorGrid sponsors={supportingSponsors} columns={2} />
+            </SponsorSection>
           </div>
 
-          <p className="mt-10 text-center text-[15px] leading-[1.7] text-[#0f2b5b] sm:text-[16px]">
+          <p className="mt-8 text-center text-[15px] leading-[1.7] text-[#0f2b5b] sm:text-[16px]">
             Sponsorship opportunities remain open. Interested organisations, please contact{' '}
             <a
               href={`mailto:${sponsorContactEmail}`}

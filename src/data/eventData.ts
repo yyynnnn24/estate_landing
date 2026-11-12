@@ -134,17 +134,17 @@ export const mainSponsor: Sponsor = {
 export const goldSponsors: Sponsor[] = [
   {
     name: 'Riverside Planning Services',
-    logo: '/sponsors/gold-riverside-planning.png',
+    logo: '/logo3.png',
     className: 'h-full w-full object-contain',
   },
   {
     name: 'Financial Perspectives',
-    logo: '/sponsors/gold-financial-perspectives.png',
+    logo: '/logo4.png',
     className: 'h-full w-full object-contain',
   },
   {
     name: 'GoalsMapper',
-    logo: '/sponsors/gold-goalsmapper.png',
+    logo: '/logo5.png',
     className: 'h-full w-full object-contain',
   },
 ];
@@ -152,7 +152,12 @@ export const goldSponsors: Sponsor[] = [
 export const supportingSponsors: Sponsor[] = [
   {
     name: 'Advisors Alliance Group',
-    logo: '/logo4.png',
+    logo: '/logo6.png',
+    className: 'h-auto w-full max-w-[340px] sm:max-w-[600px]',
+  },
+  {
+    name: 'GoalsMapper',
+    logo: '/logo5.png',
     className: 'h-auto w-full max-w-[340px] sm:max-w-[600px]',
   }
 ];
