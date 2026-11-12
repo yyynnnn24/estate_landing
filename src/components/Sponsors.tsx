@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
+import GoldSponsors from './GoldSponsors';
 import SectionReveal from './SectionReveal';
 import {
-  goldSponsors,
   mainSponsor,
   sponsorContactEmail,
   supportingSponsors,
@@ -59,9 +59,7 @@ export default function Sponsors() {
               />
             </SponsorCard>
 
-            <SponsorCard label="Gold Sponsors">
-              <SponsorLogos sponsors={goldSponsors} />
-            </SponsorCard>
+            <GoldSponsors />
 
             <SponsorCard label="Supporting Sponsors">
               <SponsorLogos sponsors={supportingSponsors} />
