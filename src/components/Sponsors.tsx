@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
-import GoldSponsors from './GoldSponsors';
 import SectionReveal from './SectionReveal';
 import {
+  goldSponsors,
   mainSponsor,
   sponsorContactEmail,
   supportingSponsors,
@@ -59,7 +59,33 @@ export default function Sponsors() {
               />
             </SponsorCard>
 
-            <GoldSponsors />
+            <div className="relative overflow-hidden rounded-[24px] bg-[#0f2b5b] px-5 pb-10 pt-14 shadow-[0_12px_30px_rgba(15,43,91,0.25)] sm:px-10 sm:pb-12 sm:pt-16">
+              <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(200,164,98,0.28),transparent_65%)]" />
+              <div aria-hidden className="pointer-events-none absolute inset-3 rounded-[18px] border border-[#c8a462]/40" />
+
+              <div className="relative flex items-center justify-center gap-3 sm:gap-5">
+                <span className="h-px w-6 bg-[#c8a462] sm:w-16" />
+                <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
+                <div className="bg-gradient-to-b from-[#2f6db5] to-[#1d4f8f] px-8 py-3 text-center text-[12px] font-semibold uppercase tracking-[0.3em] text-white shadow-[0_6px_14px_rgba(0,0,0,0.35)] [clip-path:polygon(0_0,100%_0,calc(100%-16px)_50%,100%_100%,0_100%,16px_50%)] sm:px-10">
+                  Gold Sponsor
+                </div>
+                <span className="h-1.5 w-1.5 rotate-45 bg-[#c8a462]" />
+                <span className="h-px w-6 bg-[#c8a462] sm:w-16" />
+              </div>
+
+              <div className="relative mx-auto mt-10 grid max-w-[360px] grid-cols-1 gap-6 md:max-w-none md:grid-cols-3 lg:gap-10">
+                {goldSponsors.map((sponsor) => (
+                  <div
+                    key={sponsor.name}
+                    className="rounded-[10px] border-[5px] border-[#c8a462] bg-white p-2 shadow-[0_10px_24px_rgba(0,0,0,0.3)]"
+                  >
+                    <div className="flex h-[200px] items-center justify-center border border-[#c8a462] p-6 md:h-[180px] lg:h-[220px]">
+                      <img src={sponsor.logo} alt={sponsor.name} className={sponsor.className} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <SponsorCard label="Supporting Sponsors">
               <SponsorLogos sponsors={supportingSponsors} />
